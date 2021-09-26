@@ -1,0 +1,82 @@
+.subscription {
+  margin-left: 93px;
+}
+
+.subscription__prizes {
+  display: block;
+  margin-bottom: 20px;
+
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.64;
+  text-transform: uppercase;
+}
+
+.subscription__container {
+  display: flex;
+  position: relative;
+}
+
+.subscription__input {
+  width: 358px;
+  min-height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  background-color: #2f303a;
+  padding: 15px 16px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  &:focus {
+    background-color: #ffffff;
+  }
+  &:focus + .subscription__label,
+  &:not(:placeholder-shown) + .subscription__label {
+    transform: translateX(-70px);
+  }
+}
+
+.subscription__label {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+
+  left: 3%;
+  top: 30%;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscription__icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 10px;
+}
+
+.subscription__button {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  align-items: center;
+
+  padding: 10px 28px 10px 29px;
+  margin-left: 12px;
+  border-radius: 4px;
+  min-width: 200px;
+  border: 0px;
+
+  color: var(--primary-white-color);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: #2f303a;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
