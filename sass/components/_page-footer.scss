@@ -3,7 +3,35 @@
   padding-bottom: 60px;
   background-color: #2f303a;
 }
+
 .page-footer__container {
-  display: flex;
   align-items: baseline;
+  width: 320px;
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.page-footer__address {
+  text-align: center;
+  flex-grow: 1;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) {
+    flex-grow: 0;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-grow: 1;
+    text-align: start;
+    margin-bottom: 0;
+  }
 }

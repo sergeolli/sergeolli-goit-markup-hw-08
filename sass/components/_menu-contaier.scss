@@ -1,0 +1,141 @@
+.menu-container {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 48px 10px;
+  background-color: var(--primary-white-color);
+  @media screen and (min-width: 480px) {
+    padding: 48px 40px;
+  }
+}
+
+.menu-container__menu-button {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+}
+
+.site-nav__menu {
+  margin-bottom: 309px;
+}
+
+site-nav__menu__item {
+  &:nth-child(-n + 2) {
+    margin-bottom: 32px;
+  }
+}
+
+.site-nav__menu__link {
+  position: relative;
+  display: block;
+
+  position: relative;
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--title-text-color);
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+
+.site-nav__menu__link__current {
+  color: var(--accent-color);
+}
+
+.contacts__menu {
+  display: flex;
+  margin-left: auto;
+  flex-direction: column-reverse;
+  margin-bottom: 64px;
+}
+
+.contacts__menu__item {
+  &:nth-child(n + 2) {
+    margin-bottom: 32px;
+  }
+}
+
+.contacts__menu__link {
+  display: flex;
+
+  color: var(--primary-text-color);
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+
+  @media screen and (min-width: 480px) {
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      font-size: 34px;
+      line-height: 40px;
+    }
+  }
+}
+
+.contacts__menu__icons {
+  display: none;
+}
+
+.socials-list {
+  display: flex;
+  @media screen and(min-width:768px) {
+    display: none;
+  }
+}
+
+.socials-list__link {
+  align-items: center;
+  display: inline-flex;
+  color: var(--accent-color);
+  font-weight: 500;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+
+  &::after {
+    content: "";
+    width: 22px;
+    height: 0px;
+    transform: rotate(90deg);
+    border: 1px solid rgba(33, 33, 33, 0.2);
+  }
+  @media screen and (min-width: 480px) {
+    font-size: 18px;
+  }
+}
+.socials-list__item {
+  &:last-child ::after {
+    display: none;
+  }
+}

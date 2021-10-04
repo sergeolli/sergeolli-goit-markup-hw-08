@@ -16,7 +16,7 @@ a {
 }
 img {
   display: block;
-  min-width: 100%;
+  width: 100%;
   height: auto;
 }
 
@@ -31,29 +31,44 @@ ul {
   margin: 0;
 }
 .container {
-  width: 1200px;
+  width: 320px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  }
 }
+
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .section__no-padding {
-  padding-bottom: 0;
+  padding-bottom: 60px;
 }
 .section__team-color {
   background-color: #f5f4fa;
 }
 .section__title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 
   color: var(--title-text-color);
   font-weight: 700;
-  font-size: 36px;
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+  }
+
+  font-size: 28px;
   line-height: 1.16;
   text-align: center;
 }

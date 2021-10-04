@@ -14,6 +14,7 @@
 
 .work__thumb {
   position: relative;
+  max-width: 370px;
 }
 .work__text {
   color: #ffffff;
@@ -26,8 +27,8 @@
 
 .work__label {
   position: absolute;
-  width: 370px;
-  height: 70px;
+  width: 100%;
+
   background-color: rgba(47, 48, 58, 0.8);
   padding-top: 27px;
   padding-bottom: 27px;

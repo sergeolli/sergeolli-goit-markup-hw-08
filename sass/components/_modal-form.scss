@@ -19,16 +19,6 @@
   margin-bottom: 20px;
 }
 
-.modal-form__label {
-  display: block;
-  font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.01em;
-  color: #757575;
-
-  margin-bottom: 4px;
-}
-
 .modal-form__wrapper {
   position: relative;
   flex-direction: column;
@@ -36,22 +26,44 @@
 
 .modal-form__input {
   min-height: 40px;
-  min-width: 448px;
+  min-width: 230px;
   padding-left: 42px;
   margin: 0;
+
+  @media screen and (min-width: 480px) {
+    min-width: 370px;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 448px;
+  }
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  &:focus {
+  &:focus,
+  &:hover {
     border: 1px solid #2196f3;
     outline: none;
   }
+  &:focus,
+  &:hover + .modal-form__icon {
+    fill: #2196f3;
+  }
+  &:hover,
+  &:focus + .modal-form__label {
+    color: var(--accent-color);
+  }
 }
 
-.modal-form__input:focus + .modal-form__icon {
-  fill: #2196f3;
+.modal-form__label {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
+  color: #757575;
+
+  margin-bottom: 4px;
 }
 
 .modal-form__icon {
@@ -70,20 +82,28 @@
   resize: none;
 
   min-height: 120px;
-  min-width: 448px;
+  min-width: 230px;
   padding: 12px 16px;
   margin: 0;
+  @media screen and (min-width: 480px) {
+    min-width: 370px;
+  }
+  @media screen and (min-width: 1200px) {
+    min-width: 448px;
+  }
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  &:focus {
+  &:focus,
+  &:hover {
     border: 1px solid var(--accent-color);
     outline: none;
   }
-  &:focus::placeholder {
+  &:focus::placeholder,
+  &:hover::placeholder {
     color: var(--accent-color);
   }
   &::placeholder {
@@ -112,6 +132,10 @@
   align-items: center;
   justify-content: center;
   color: #757575;
+  font-size: 12px;
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
 }
 
 .checkbox__icon-border {
