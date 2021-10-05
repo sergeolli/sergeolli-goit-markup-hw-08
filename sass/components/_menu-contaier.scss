@@ -1,5 +1,8 @@
 .menu-container {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
   top: 0;
   left: 0;
@@ -30,23 +33,26 @@
 }
 
 .site-nav__menu {
-  margin-bottom: 309px;
-}
-
-site-nav__menu__item {
   &:nth-child(-n + 2) {
     margin-bottom: 32px;
   }
 }
-
+.site-nav__menu__item {
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
 .site-nav__menu__link {
   position: relative;
   display: block;
 
   position: relative;
   display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
+
+  @media screen and(min-width:768px) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 
   color: var(--title-text-color);
   font-weight: 500;
@@ -67,7 +73,6 @@ site-nav__menu__item {
 
 .contacts__menu {
   display: flex;
-  margin-left: auto;
   flex-direction: column-reverse;
   margin-bottom: 64px;
 }

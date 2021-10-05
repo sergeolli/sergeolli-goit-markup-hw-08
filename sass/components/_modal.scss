@@ -1,15 +1,16 @@
 .modal {
-  position: absolute;
-
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin: auto;
   width: 310px;
   @media screen and (min-width: 480px) {
     width: 450px;
   }
   @media screen and (min-width: 1200px) {
     width: 528px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
   background: #ffffff;
@@ -25,9 +26,10 @@
 }
 
 .modal__button {
-  cursor: pointer;
   position: absolute;
+  cursor: pointer;
   display: flex;
+
   justify-content: center;
   align-items: center;
   top: 8px;
